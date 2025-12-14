@@ -8,11 +8,11 @@
 
 改以水桶接水方式後，延伸出另一個問題，常常水滿了而不知情，發現時已是滿地積水，造成生活上困擾，故想透過此專案進行問題改善。
 <p align="center">
-  <img src="images/001.jpge" width="700" alt="環境照片">
+   <img src="images/001.JPEG" width="700" alt="環境照片">
 </p>
 
 <p align="center">
-  <img src="images/002.jpge" width="700" alt="環境照片">
+    <img src="images/002.JPEG" width="700" alt="環境照片">
 </p>
 ---
 
@@ -23,12 +23,11 @@
 
 ## 裝置照片
 
-> ✅ GitHub README 要「調整圖片顯示大小」，建議用 HTML `<img>`（Markdown `![]()` 無法調尺寸）
 
 <p align="center">
-  <img src="images/003.jpge" width="700" alt="裝置照片">
+  <img src="images/003.JPEG" width="700" alt="裝置照片">
 </p>
 
 <p align="center">
-  <img src="images/003.jpge" width="700" alt="裝置照片">
+  <img src="images/004.JPEG" width="700" alt="裝置照片">
 </p>

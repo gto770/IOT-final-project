@@ -1,5 +1,34 @@
-# IOT-水位偵測自動關閉冷氣
-作者:113453015 黃景偉
-![IMG_5460](https://github.com/user-attachments/assets/ae1e9019-d180-4c17-b8e7-8b2d5c2b0c5a)
-<img src="https://github.com/user-attachments/assets/ae1e9019-d180-4c17-b8e7-8b2d5c2b0c5a" width="400" alt="IMG_5460">
+# IoT 水位偵測自動關閉冷氣
+作者：113453015 黃景偉
 
+---
+
+## 專案背景
+因某些無法變更之限制，導致原本外接排水管斜度不足，因而排水異常，造成冷氣室內機漏水，在冷氣師傅建議下，改回傳統以水桶接水方式改冷氣漏水。
+
+改以水桶接水方式後，延伸出另一個問題，常常水滿了而不知情，發現時已是滿地積水，造成生活上困擾，故想透過此專案進行問題改善。
+<p align="center">
+  <img src="images/001.jpge" width="700" alt="環境照片">
+</p>
+
+<p align="center">
+  <img src="images/002.jpge" width="700" alt="環境照片">
+</p>
+---
+
+## 專案介紹
+透過樹梅派設計一個水位偵測警報與回應機制，當偵測到水位來到一定高度時（例如：八分滿），透過蜂鳴器來警示該倒水了；如果沒有任何回應，水位持續上升到最後警戒值（例如：九分滿），則觸發安全機制，自動關閉冷氣機。
+
+---
+
+## 裝置照片
+
+> ✅ GitHub README 要「調整圖片顯示大小」，建議用 HTML `<img>`（Markdown `![]()` 無法調尺寸）
+
+<p align="center">
+  <img src="images/003.jpge" width="700" alt="裝置照片">
+</p>
+
+<p align="center">
+  <img src="images/003.jpge" width="700" alt="裝置照片">
+</p>

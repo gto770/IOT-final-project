@@ -31,3 +31,48 @@
 <p align="center">
   <img src="images/004.JPEG" width="700" alt="裝置照片">
 </p>
+
+---
+
+## 專案硬體所需材料
+1. Rasberry Pi 4  
+2. 水位偵測器（乾接點）  
+3. 5V 繼電器  
+4. 蜂鳴器  
+5. 麵包版  
+6. 杜邦線  
+7. 紅外線發射器（以遙控器取代）
+
+<p align="center">
+  <img src="images/005.JPEG" width="700" alt="材料">
+</p>
+<p align="center">
+  <img src="images/006.JPEG" width="700" alt="材料">
+</p>
+<p align="center">
+  <img src="images/007.JPEG" width="700" alt="材料">
+</p>
+
+
+
+---
+
+## 電路配置圖
+<p align="center">
+  <img src="images/008.png" width="700" alt="材料">
+</p>
+
+---
+
+## 程式碼功能介紹
+
+### 1) 針對水位偵測器進行初始值設定
+```python
+# 第1顆水位偵測：用內建拉高電阻
+GPIO.setup(WATER_PIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+
+# 第2顆水位偵測：同樣用內建拉高電阻
+GPIO.setup(WATER2_PIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+
+
+

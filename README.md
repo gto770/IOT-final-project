@@ -73,6 +73,59 @@ GPIO.setup(WATER_PIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 # 第2顆水位偵測：同樣用內建拉高電阻
 GPIO.setup(WATER2_PIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+```
+### 2) 針對警報蜂鳴器與繼電器（用以控制冷氣遙控器）進行初始值設定
+```python
+# 蜂鳴器：輸出腳
+GPIO.setup(BUZZER_PIN, GPIO.OUT)
+GPIO.output(BUZZER_PIN, GPIO.LOW)  # 先關閉蜂鳴器
 
+# 繼電器：輸出腳（假設低電位觸發）
+'''GPIO.setup(RELAY_PIN, GPIO.OUT)'''
+GPIO.setup(23, GPIO.OUT, initial=GPIO.HIGH)
+GPIO.output(RELAY_PIN, GPIO.HIGH)  # 先預設為「不吸合、不通電」
+```
+### 3) 第一段告警（蜂鳴器）
+```python
+v1 = read_level()
+if v1 == 1:
+    print("第1顆水位：水高")
+    GPIO.output(BUZZER_PIN, GPIO.HIGH)   # 蜂鳴器叫
+else:
+    print("第1顆水位：水低")
+    GPIO.output(BUZZER_PIN, GPIO.LOW)    # 蜂鳴器關
+```
+
+### 4) 第二段告警（繼電器觸發關冷氣）
+
+```python
+v2 = read_level2()
+if v2 == 1:
+    print("第2顆水位：水高 -> 繼電器通電（吸合）")
+    GPIO.output(RELAY_PIN, GPIO.HIGH)  # 低電位觸發，讓繼電器吸合以關閉冷氣
+else:
+    print("第2顆水位：水低 -> 繼電器斷電（釋放）")
+    GPIO.output(RELAY_PIN, GPIO.LOW)   # 關閉繼電器
+```
+
+
+---
+
+## Demo 影片
+- https://youtube.com/shorts/eSp5bl-uCWU
+
+---
+
+## 可以改進的地方
+- 整合多顆水位感測器，使用多段水位偵測器或是數位式水位偵測器  
+- 增加「不可能狀態判斷」：例如第二顆觸發前第一顆一定先觸發；若順序反了就記錄為異常  
+- 增加其他告警機制（例如：LINE 或 Email 通知）
+
+---
+
+## 參考資料
+- https://www.reddit.com/r/RASPBERRY_PI_PROJECTS/comments/1dhzwvw/water_level_detection_raspberry_pi/?tl=zh-hant  
+- https://www.reddit.com/r/de_EDV/comments/panhes/empfehlung_gesucht_wasserstand_messen_mit/?tl=zh-hant  
+- https://www.youtube.com/watch?app=desktop&v=hDFx26F5vZ8
 
 

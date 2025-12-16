@@ -61,7 +61,7 @@
   <img src="images/008.png" width="700" alt="材料">
 </p>
 
-## 接線表（單表）
+## 接線表
 
 | 類別/元件 | 腳位 | Raspberry Pi 實體腳位 | GPIO(BCM) / 說明 |
 |---|---|---|---|
